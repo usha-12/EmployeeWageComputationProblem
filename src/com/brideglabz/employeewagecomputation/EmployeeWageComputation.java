@@ -2,16 +2,12 @@ package com.brideglabz.employeewagecomputation;
 public class EmployeeWageComputation {
     public static void main(String[] args) {
         System.out.println("Welcome to Employee Wage Computation Problem");
-        //Check Employee is Present or Absent
-        double empCheck = Math.floor(Math.random()*10) % 2;
-        if (empCheck == 1)
-            System.out.println("Employee is Present");
-        else
-            System.out.println("Employee is Absent");
-
+        //Calculating Daily Wage of Employee
+        //wage per hour = 20
+        int workingHours = 8;
+        int dailyWage = workingHours * 20;
+        System.out.println("Daily Wage is : $" + dailyWage);
     }
     }
-    /*Check Employee is
-Present or Absent
-- Use ((RANDOM)) for Attendance
-Check*/
+    /*Calculate Daily
+Employee Wage - Assume Wage per Hour is 20 - Assume Full Day Hour is 8*/
