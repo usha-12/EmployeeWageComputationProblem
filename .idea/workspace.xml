@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="2c64fb12-991a-4259-809a-a39b732271d1" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/src/com/brideglabz/employeewagecomputation/CompanyWage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/brideglabz/employeewagecomputation/CompanyWage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/brideglabz/employeewagecomputation/EmployeeWageComputation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/brideglabz/employeewagecomputation/EmployeeWageComputation.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
