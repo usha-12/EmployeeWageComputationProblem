@@ -1,17 +1,18 @@
 package com.brideglabz.employeewagecomputation;
-public class EmployeeWageComputation {
+public class EmployeeWageComputation implements IComputeEmpWage {
+
     public static final int IS_FULL_TIME = 1;
     public static final int IS_PART_TIME = 2;
 
     private int numberOfCompanies = 0;
     private CompanyWage[] companyWageArray;
 
-    public EmployeeWageComputation() {
+    void publicEmployeeWageComputation() {
         companyWageArray = new CompanyWage[5];
     }
 
     public static void main(String args[]) {
-        EmployeeWageComputation wageCalculator = new EmployeeWageComputation();
+        IComputeEmpWage wageCalculator = new EmployeeWageComputation();
 
         wageCalculator.addCompany("Google", 50, 15, 200);
         wageCalculator.addCompany("Amazon", 80, 20, 120);
@@ -19,12 +20,12 @@ public class EmployeeWageComputation {
         wageCalculator.computeEmpWage();
     }
 
-    private void addCompany(String companyName, int empRatePerHour, int numOfWorkingDays, int maxHoursInMonth) {
+    public void addCompany(String companyName, int empRatePerHour, int numOfWorkingDays, int maxHoursInMonth) {
         companyWageArray[numberOfCompanies] = new CompanyWage(companyName, empRatePerHour, numOfWorkingDays, maxHoursInMonth);
         numberOfCompanies++;
     }
 
-    private void computeEmpWage() {
+    public void computeEmpWage() {
         for (int i=0; i<numberOfCompanies; i++) {
             companyWageArray[i].setTotalEmpWage(this.computeEmpWage(companyWageArray[i]));
             System.out.println(companyWageArray[i]);

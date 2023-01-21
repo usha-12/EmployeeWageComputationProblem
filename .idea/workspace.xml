@@ -5,7 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2c64fb12-991a-4259-809a-a39b732271d1" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/com/brideglabz/employeewagecomputation/IComputeEmpWage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/brideglabz/employeewagecomputation/CompanyWage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/brideglabz/employeewagecomputation/CompanyWage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/brideglabz/employeewagecomputation/EmployeeWageComputation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/brideglabz/employeewagecomputation/EmployeeWageComputation.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -39,6 +41,11 @@
     "last_opened_file_path": "C:/Users/User/Desktop/243-rfp/EmployeeWageComputationProblem"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.brideglabz.employeewagecomputation" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="EmployeeWageComputation" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.brideglabz.employeewagecomputation.EmployeeWageComputation" />
