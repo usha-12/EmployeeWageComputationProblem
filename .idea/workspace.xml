@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="2c64fb12-991a-4259-809a-a39b732271d1" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/brideglabz/employeewagecomputation/EmployeeWageComputation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/brideglabz/employeewagecomputation/EmployeeWageComputation.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,7 +36,7 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/User/Desktop/243-rfp/ArrayHandling"
+    "last_opened_file_path": "C:/Users/User/Desktop/243-rfp/EmployeeWageComputationProblem"
   }
 }]]></component>
   <component name="RunManager">
