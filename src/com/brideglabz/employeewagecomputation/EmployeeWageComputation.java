@@ -1,14 +1,18 @@
 package com.brideglabz.employeewagecomputation;
 
+import java.util.HashMap;
 import java.util.LinkedList;
+import java.util.Map;
 
 public class EmployeeWageComputation implements IComputeEmpWage {
     public static final int IS_FULL_TIME = 1;
     public static final int IS_PART_TIME = 2;
     private LinkedList<CompanyWage> companyWageList;
+    private Map<String,CompanyWage> companyToWageMap;
 
     public EmployeeWageComputation() {
         companyWageList = new LinkedList<>();
+        companyToWageMap = new HashMap<>();
     }
 
     public static void main(String args[]) {
@@ -18,11 +22,15 @@ public class EmployeeWageComputation implements IComputeEmpWage {
         wageCalculator.addCompany("Amazon", 80, 20, 120);
         wageCalculator.addCompany("Netflix", 90, 18, 220);
         wageCalculator.computeEmpWage();
+        System.out.println("Total Wage for Google : $" + wageCalculator.getTotalEmpWage("Google"));
+        System.out.println("Total Wage for Amazon : $" + wageCalculator.getTotalEmpWage("Amazon"));
+        System.out.println("Total Wage for Netflix : $" + wageCalculator.getTotalEmpWage("Netflix"));
     }
 
     public void addCompany(String companyName, int empRatePerHour, int numOfWorkingDays, int maxHoursInMonth) {
         CompanyWage companyWage = new CompanyWage(companyName, empRatePerHour, numOfWorkingDays, maxHoursInMonth);
         companyWageList.add(companyWage);
+        companyToWageMap.put(companyName, companyWage);
     }
 
     public void computeEmpWage() {
@@ -63,5 +71,10 @@ public class EmployeeWageComputation implements IComputeEmpWage {
             System.out.println("Day " + totalWorkingDays + "	Employee hours : " + empHrs +"	Wage $" + empWage);
         }
         return (totalEmpHrs * companyWage.empRatePerHour);
+    }
+
+    @Override
+    public int getTotalEmpWage(String company) {
+        return companyToWageMap.get(company).totalEmpWage;
     }
 }
