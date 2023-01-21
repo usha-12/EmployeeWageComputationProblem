@@ -2,18 +2,36 @@ package com.brideglabz.employeewagecomputation;
 public class EmployeeWageComputation {
     public static final int IS_FULL_TIME = 1;
     public static final int IS_PART_TIME = 2;
-    public static void main(String args[]) {
-        computeEmpWage("Google", 50, 15, 200);
-        computeEmpWage("Amazon", 80, 20, 120);
-        computeEmpWage("Meta", 60, 20, 100);
-        computeEmpWage("Netflix", 90, 18, 220);
-        computeEmpWage("Tesla", 100, 20, 250);
+
+    private final String companyName;
+    private final int empRatePerHour;
+    private final int numOfWorkingDays;
+    private final int maxHoursInMonth;
+    private int totalEmpWage;
+
+    public EmployeeWageComputation(String companyName, int empRatePerHour, int numOfWorkingDays, int maxHoursInMonth) {
+        this.companyName = companyName;
+        this.empRatePerHour = empRatePerHour;
+        this.numOfWorkingDays = numOfWorkingDays;
+        this.maxHoursInMonth = maxHoursInMonth;
     }
 
-    public static void computeEmpWage(String companyName, int empRatePerHour, int numOfWorkingDays, int maxHoursInMonth) {
+    public static void main(String args[]) {
+        EmployeeWageComputation google = new EmployeeWageComputation("Google", 50, 15, 200);
+        EmployeeWageComputation amazon = new EmployeeWageComputation("Amazon", 80, 20, 120);
+        EmployeeWageComputation netflix = new EmployeeWageComputation("Netflix", 90, 18, 220);
+
+        google.computeEmpWage();
+        System.out.println(google);
+        amazon.computeEmpWage();
+        System.out.println(amazon);
+        netflix.computeEmpWage();
+        System.out.println(netflix);
+    }
+
+    public void computeEmpWage() {
         int empHrs = 0;
         int empWage = 0;
-        int totalEmpWage = 0;
         int totalWorkingDays = 0;
         int totalEmpHrs = 0;
 
@@ -42,13 +60,17 @@ public class EmployeeWageComputation {
         }
         totalEmpWage = totalEmpHrs * empRatePerHour;
         System.out.println();
-        System.out.println(companyName+" company Employee Monthly Wage : $" + totalEmpWage+"\n\n");
+    }
+
+    @Override
+    public String toString() {
+        return " "+companyName+" company Employee Monthly Wage : $" + totalEmpWage+"\n\n";
     }
     }
-/*Compute Employee Wage
-for multiple companies - Note: Each Company has its own
-wage, number of working days
-and working hours per month
-- Use Class Method with function
-parameters instead of Class
-Variables*/
+/*Ability to save the Total
+Wage for Each
+Company - Note: You can Create
+EmpWageBuilder for each
+Company
+- Use Instance Variable instead of
+function parameters*/
